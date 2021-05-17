@@ -39,7 +39,7 @@
       "!src/hooks/index.tsx"
     ],
     "moduleNameMapper": {
-      "^@assets$": "<rootDir>/src/assets/index.ts",
+      "^@assets/*$": "<rootDir>/src/assets/*",
       "^@components$": "<rootDir>/src/components/index.ts",
       "^@hooks$": "<rootDir>/src/hooks/index.ts",
       "^@pages$": "<rootDir>/src/pages/index.ts",

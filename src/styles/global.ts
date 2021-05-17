@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import BackgroundImage from '@assets/bg.jpg';
+
 export default createGlobalStyle`
   * {
     margin: 0;
@@ -9,7 +11,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #312e38;
+    background: url(${BackgroundImage}) top left #ccc;
     color: #fff;
     -webkit-font-smoothing: antialiased;
   }
