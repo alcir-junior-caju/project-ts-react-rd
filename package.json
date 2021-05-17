@@ -28,8 +28,7 @@
     "test": "react-app-rewired test",
     "test:coverage": "react-app-rewired test --coverage --watchAll false",
     "eslint:fix": "eslint --fix src --ext .tsx,.ts",
-    "eject": "react-app-rewired eject",
-    "postinstall": "yarn husky install && yarn husky add .husky/commit-msg \"yarn commitlint --edit $1\" && yarn husky add .husky/prepare-commit-msg \"yarn lint-staged && exec < /dev/tty && node_modules/.bin/git-cz cz --hook || true\""
+    "eject": "react-app-rewired eject"
   },
   "jest": {
     "collectCoverageFrom": [
