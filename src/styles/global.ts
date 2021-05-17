@@ -8,11 +8,20 @@ export default createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+
+    /* Variables */
+    --primary: #007f56;
+    --text: #868686;
+    --auxiliary1: #fe9481;
+    --auxiliary2: #fcda92;
+    --auxiliary3: #9c8cb9;
+    --commonWhite: #fff;
+    --commonBlack: #000;
   }
 
   body {
-    background: url(${BackgroundImage}) top left #ccc;
-    color: #fff;
+    background: #ccc url(${BackgroundImage}) top left;
+    color: var(--text);
     -webkit-font-smoothing: antialiased;
   }
 
@@ -26,5 +35,11 @@ export default createGlobalStyle`
 
   button {
     cursor: pointer;
+  }
+
+  #root {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 40px 20px;
   }
 `;
