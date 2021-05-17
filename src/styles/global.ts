@@ -15,7 +15,7 @@ export default createGlobalStyle`
   }
 
   body, input, button {
-    font: 16px 'Roboto Slab', serif;
+    font: 16px 'Open Sans', Helvetica, sans-serif, arial;
   }
 
   h1, h2, h3, h4, h5, h6, strong {
