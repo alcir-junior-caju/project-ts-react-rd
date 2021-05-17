@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { Footer, Header } from '@components';
+import { Footer, Header, Main } from '@components';
 
 const Home: React.FC = () => {
   return (
     <>
       <Header />
+      <Main />
       <Footer />
     </>
   );
