@@ -36,6 +36,10 @@ export default createGlobalStyle`
     font-weight: 500;
   }
 
+  p {
+    margin-bottom: 20px;
+  }
+
   button {
     cursor: pointer;
   }
