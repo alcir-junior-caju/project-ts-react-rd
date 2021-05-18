@@ -1,12 +1,19 @@
 import React from 'react';
 
-import { Footer, Header, Main } from '@components';
+import { Box, Footer, Header, Main } from '@components';
+
+import { Container } from './styles';
 
 const Home: React.FC = () => {
   return (
     <>
       <Header />
       <Main />
+      <Container>
+        <Box />
+        <Box />
+        <Box />
+      </Container>
       <Footer />
     </>
   );
