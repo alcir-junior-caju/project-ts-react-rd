@@ -1,8 +1,9 @@
 import React from 'react';
 
+import { useModal } from '@hooks/modal';
 import { useScrollDown } from '@hooks/scrollDown';
 
-import { Box, Footer, Header, Main, ScrollDown } from '@components';
+import { Box, Footer, Header, Main, Modal, ScrollDown } from '@components';
 
 import desktopImage from '@assets/desktop.png';
 import mobileImage from '@assets/mobile.png';
@@ -11,7 +12,8 @@ import tabletImage from '@assets/tablet.png';
 import { Container } from './styles';
 
 const Home: React.FC = () => {
-  const { isActive, setIsActive } = useScrollDown();
+  const { isScrollDown, setIsScrollDown } = useScrollDown();
+  const { isModal, setIsModal } = useModal();
 
   const BOXS = [
     {
@@ -24,7 +26,7 @@ const Home: React.FC = () => {
       lectus. Sed nec odio eu est aliquet ultrices nec a eros.
       `,
       buttonLabel: 'Leia mais...',
-      buttonAction: () => setIsActive(true)
+      buttonAction: () => setIsScrollDown(true)
     },
     {
       color: 'auxiliary2',
@@ -36,7 +38,7 @@ const Home: React.FC = () => {
       lectus. Sed nec odio eu est aliquet ultrices nec a eros.
       `,
       buttonLabel: 'Leia mais...',
-      buttonAction: () => setIsActive(true)
+      buttonAction: () => setIsModal(true)
     },
     {
       color: 'auxiliary3',
@@ -48,7 +50,7 @@ const Home: React.FC = () => {
       lectus. Sed nec odio eu est aliquet ultrices nec a eros.
       `,
       buttonLabel: 'Alterar tema',
-      buttonAction: () => setIsActive(true)
+      buttonAction: () => setIsScrollDown(true)
     }
   ];
 
@@ -79,7 +81,8 @@ const Home: React.FC = () => {
         )}
       </Container>
 
-      {isActive && <ScrollDown />}
+      {isScrollDown && <ScrollDown />}
+      {isModal && <Modal />}
 
       <Footer />
     </>

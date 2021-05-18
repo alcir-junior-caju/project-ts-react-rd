@@ -5,7 +5,7 @@ import { useScrollDown } from '@hooks/scrollDown';
 import { Container } from './styles';
 
 const ScrollDown: React.FC = () => {
-  const { setIsActive } = useScrollDown();
+  const { setIsScrollDown } = useScrollDown();
 
   const handleCloseScrollDown = useCallback(() => {
     window.scroll({
@@ -14,9 +14,9 @@ const ScrollDown: React.FC = () => {
       behavior: 'smooth'
     });
     setTimeout(() => {
-      setIsActive(false);
+      setIsScrollDown(false);
     }, 500);
-  }, [setIsActive]);
+  }, [setIsScrollDown]);
 
   useEffect(() => {
     window.scroll({
