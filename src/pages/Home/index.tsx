@@ -63,6 +63,7 @@ const Home: React.FC = () => {
             buttonAction
           }) => (
             <Box
+              key={imageLabel}
               color={color}
               image={image}
               imageLabel={imageLabel}

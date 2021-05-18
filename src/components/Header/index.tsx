@@ -37,10 +37,8 @@ const Header: React.FC = () => {
 
       <Menu>
         {LINKS.map(({ link, label }) => (
-          <MenuLink>
-            <Link key={label} to={link}>
-              {label}
-            </Link>
+          <MenuLink key={label}>
+            <Link to={link}>{label}</Link>
           </MenuLink>
         ))}
       </Menu>

@@ -17,7 +17,7 @@ export default createGlobalStyle`
     --auxiliary3: #9c8cb9;
     --commonWhite: #fff;
     --commonBlack: #000;
-    --commonGrey: #ccc;
+    --commonGrey: #efefef;
   }
 
   body {
