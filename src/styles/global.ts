@@ -51,5 +51,10 @@ export default createGlobalStyle`
     max-width: 1160px;
     margin: 0 auto;
     padding: 10px 40px 20px;
+
+    @media (max-width: 575.98px) {
+      max-width: 100%;
+      padding: 10px;
+    }
   }
 `;
