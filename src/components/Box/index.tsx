@@ -2,17 +2,35 @@ import React from 'react';
 
 import { Container } from './styles';
 
-const Box: React.FC = () => {
+interface BoxProps {
+  color: string;
+  image: string;
+  imageLabel: string;
+  description: string;
+  buttonLabel: string;
+  buttonAction: Function;
+}
+
+const Box: React.FC<BoxProps> = ({
+  color,
+  image,
+  imageLabel,
+  description,
+  buttonLabel,
+  buttonAction
+}) => {
   return (
-    <Container>
-      <div>Image</div>
+    <Container color={color}>
       <div>
-        Aliquam a turpis dictum, dapibus dui convallis,
-        <strong> consectetur </strong>
-        lectus. Sed nec odio eu est aliquet ultrices nec a eros.
+        <img src={image} alt={imageLabel} />
+        <h3>{imageLabel}</h3>
       </div>
+      <div
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
       <div>
-        <span>Leia mais...</span>
+        <span>{buttonLabel}</span>
       </div>
     </Container>
   );

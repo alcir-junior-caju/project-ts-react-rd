@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.aside`
+interface ContainerProps {
+  color: string;
+}
+
+export const Container = styled.aside<ContainerProps>`
   background: var(--commonWhite);
   color: var(--text);
   display: flex;
@@ -8,13 +12,18 @@ export const Container = styled.aside`
 
   & > div {
     &:nth-child(1) {
-      align-items: center;
-      background: var(--auxiliary1);
-      display: flex;
-      justify-content: center;
-      padding: 20px;
-      width: 100%;
+      background: ${({ color }) => `var(--${color})`};
       color: var(--commonWhite);
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      place-items: center;
+      width: 100%;
+
+      & > h3 {
+        font-size: 1.4rem;
+        margin-top: 20px;
+      }
     }
 
     &:nth-child(2) {
@@ -27,14 +36,21 @@ export const Container = styled.aside`
     }
 
     &:nth-child(3) {
+      margin-bottom: 12px;
       padding: 10px;
       text-align: right;
 
       & > span {
-        background: var(--auxiliary1);
+        background: ${({ color }) => `var(--${color})`};
         color: var(--commonWhite);
         cursor: pointer;
         padding: 5px 8px;
+        transition: 0.3s;
+
+        &:hover {
+          background: ${({ color }) => `var(--${color})`};
+          opacity: 0.6;
+        }
       }
     }
   }
