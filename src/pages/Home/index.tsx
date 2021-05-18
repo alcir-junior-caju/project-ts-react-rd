@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Footer, Header, Main } from '@components';
+import { Box, Footer, Header, Main, ScrollDown } from '@components';
 
 import desktopImage from '@assets/desktop.png';
 import mobileImage from '@assets/mobile.png';
@@ -74,6 +74,9 @@ const Home: React.FC = () => {
           )
         )}
       </Container>
+
+      <ScrollDown />
+
       <Footer />
     </>
   );

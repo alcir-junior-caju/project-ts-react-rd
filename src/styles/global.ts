@@ -20,6 +20,8 @@ export default createGlobalStyle`
     --commonGrey: #efefef;
   }
 
+  html { scroll-behavior: smooth; }
+
   body {
     background: var(--commonGrey) url(${BackgroundImage}) top left;
     color: var(--text);

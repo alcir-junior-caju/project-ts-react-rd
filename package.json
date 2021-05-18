@@ -41,7 +41,7 @@
     "moduleNameMapper": {
       "^@assets/*$": "<rootDir>/src/assets/*",
       "^@components$": "<rootDir>/src/components/index.ts",
-      "^@hooks$": "<rootDir>/src/hooks/index.ts",
+      "^@hooks/*$": "<rootDir>/src/hooks/*",
       "^@pages$": "<rootDir>/src/pages/index.ts",
       "^@routes$": "<rootDir>/src/routes/index.ts",
       "^@services$": "<rootDir>/src/services/index.ts",
