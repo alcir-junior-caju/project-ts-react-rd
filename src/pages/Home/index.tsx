@@ -2,6 +2,7 @@ import React from 'react';
 
 import { useModal } from '@hooks/modal';
 import { useScrollDown } from '@hooks/scrollDown';
+import { useTheme } from '@hooks/theme';
 
 import { Box, Footer, Header, Main, Modal, ScrollDown } from '@components';
 
@@ -14,6 +15,8 @@ import { Container } from './styles';
 const Home: React.FC = () => {
   const { isScrollDown, setIsScrollDown } = useScrollDown();
   const { isModal, setIsModal } = useModal();
+  const { theme, setTheme } = useTheme();
+  console.log(theme);
 
   const BOXS = [
     {
@@ -49,8 +52,14 @@ const Home: React.FC = () => {
       <strong> consectetur </strong>
       lectus. Sed nec odio eu est aliquet ultrices nec a eros.
       `,
-      buttonLabel: 'Alterar tema',
-      buttonAction: () => setIsScrollDown(true)
+      buttonLabel: theme === 'light' ? 'Alterar tema' : 'Voltar tema',
+      buttonAction: () => {
+        if (theme === 'light') {
+          setTheme('dark');
+        } else {
+          setTheme('light');
+        }
+      }
     }
   ];
 

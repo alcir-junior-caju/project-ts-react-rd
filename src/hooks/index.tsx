@@ -2,12 +2,15 @@ import React from 'react';
 
 import { ModalProvider } from './modal';
 import { ScrollDownProvider } from './scrollDown';
+import { ThemeProvider } from './theme';
 
 const AppProvider: React.FC = ({ children }) => {
   return (
-    <ScrollDownProvider>
-      <ModalProvider>{children}</ModalProvider>
-    </ScrollDownProvider>
+    <ThemeProvider>
+      <ScrollDownProvider>
+        <ModalProvider>{children}</ModalProvider>
+      </ScrollDownProvider>
+    </ThemeProvider>
   );
 };
 

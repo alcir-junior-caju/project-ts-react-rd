@@ -3,12 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import BackgroundImage from '@assets/bg.jpg';
 
 export default createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-
+  :root {
     /* Variables */
     --primary: #007f56;
     --text: #868686;
@@ -18,12 +13,20 @@ export default createGlobalStyle`
     --commonWhite: #fff;
     --commonBlack: #000;
     --commonGrey: #efefef;
+    --background: var(--commonGrey) url(${BackgroundImage}) top left;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
   }
 
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--commonGrey) url(${BackgroundImage}) top left;
+    background: var(--background);
     color: var(--text);
     -webkit-font-smoothing: antialiased;
   }
