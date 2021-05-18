@@ -12,6 +12,7 @@ export const Container = styled.section`
     font-size: 2.8rem;
     padding-top: 16px;
     text-align: center;
+    line-height: 38px;
 
     & > span {
       font-weight: 800;

@@ -19,9 +19,7 @@ const BOXS = [
     lectus. Sed nec odio eu est aliquet ultrices nec a eros.
     `,
     buttonLabel: 'Leia mais...',
-    buttonAction: () => {
-      'test';
-    }
+    buttonAction: () => console.log('test1')
   },
   {
     color: 'auxiliary2',
@@ -33,9 +31,7 @@ const BOXS = [
     lectus. Sed nec odio eu est aliquet ultrices nec a eros.
     `,
     buttonLabel: 'Leia mais...',
-    buttonAction: () => {
-      'test';
-    }
+    buttonAction: () => console.log('test2')
   },
   {
     color: 'auxiliary3',
@@ -47,9 +43,7 @@ const BOXS = [
     lectus. Sed nec odio eu est aliquet ultrices nec a eros.
     `,
     buttonLabel: 'Alterar tema',
-    buttonAction: () => {
-      'test';
-    }
+    buttonAction: () => console.log('test3')
   }
 ];
 

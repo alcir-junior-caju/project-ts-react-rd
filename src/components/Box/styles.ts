@@ -40,10 +40,10 @@ export const Container = styled.aside<ContainerProps>`
       padding: 10px;
       text-align: right;
 
-      & > span {
+      & > button {
         background: ${({ color }) => `var(--${color})`};
+        border: none;
         color: var(--commonWhite);
-        cursor: pointer;
         padding: 5px 8px;
         transition: 0.3s;
 

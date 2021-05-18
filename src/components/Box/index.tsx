@@ -30,7 +30,9 @@ const Box: React.FC<BoxProps> = ({
         dangerouslySetInnerHTML={{ __html: description }}
       />
       <div>
-        <span>{buttonLabel}</span>
+        <button type="button" onClick={() => buttonAction()}>
+          {buttonLabel}
+        </button>
       </div>
     </Container>
   );
