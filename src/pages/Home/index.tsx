@@ -24,11 +24,7 @@ const Home: React.FC = () => {
       lectus. Sed nec odio eu est aliquet ultrices nec a eros.
       `,
       buttonLabel: 'Leia mais...',
-      buttonAction: () =>
-        setIsActive({
-          type: 'scroll',
-          active: true
-        })
+      buttonAction: () => setIsActive(true)
     },
     {
       color: 'auxiliary2',
@@ -40,11 +36,7 @@ const Home: React.FC = () => {
       lectus. Sed nec odio eu est aliquet ultrices nec a eros.
       `,
       buttonLabel: 'Leia mais...',
-      buttonAction: () =>
-        setIsActive({
-          type: 'modal',
-          active: true
-        })
+      buttonAction: () => setIsActive(true)
     },
     {
       color: 'auxiliary3',
@@ -56,11 +48,7 @@ const Home: React.FC = () => {
       lectus. Sed nec odio eu est aliquet ultrices nec a eros.
       `,
       buttonLabel: 'Alterar tema',
-      buttonAction: () =>
-        setIsActive({
-          type: 'theme',
-          active: true
-        })
+      buttonAction: () => setIsActive(true)
     }
   ];
 
@@ -91,7 +79,7 @@ const Home: React.FC = () => {
         )}
       </Container>
 
-      {isActive.active && isActive.type === 'scroll' && <ScrollDown />}
+      {isActive && <ScrollDown />}
 
       <Footer />
     </>

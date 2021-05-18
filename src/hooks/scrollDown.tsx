@@ -1,11 +1,8 @@
 import React, { createContext, useState, useContext } from 'react';
 
 interface ScrollDownContextData {
-  isActive: {
-    type: string;
-    active: boolean;
-  };
-  setIsActive(active: Object): void;
+  isActive: boolean;
+  setIsActive(active: boolean): void;
 }
 
 const ScrollDownContext = createContext<ScrollDownContextData>(
@@ -13,10 +10,7 @@ const ScrollDownContext = createContext<ScrollDownContextData>(
 );
 
 export const ScrollDownProvider: React.FC = ({ children }) => {
-  const [isActive, setIsActive] = useState({
-    type: '',
-    active: false
-  });
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <ScrollDownContext.Provider value={{ isActive, setIsActive }}>
