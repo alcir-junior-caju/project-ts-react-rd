@@ -50,6 +50,11 @@ export const ModalContent = styled.div`
     &:nth-child(2) {
       padding: 20px 36px;
       text-align: justify;
+
+      @media (min-width: 320px) and (max-width: 768px) {
+        height: 80vh;
+        overflow-y: scroll;
+      }
     }
   }
 `;

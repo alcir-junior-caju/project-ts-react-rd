@@ -23,11 +23,7 @@ const Modal: React.FC = () => {
             condimentum rutrum lacus, et egestas metus gravida ac. Vivamus
             ornare quam elit, sed lobortis ante auctor at. Aenean augue dui,
             dignissim vitae pharetra nec, auctor tristique metus. Aliquam auctor
-            justo turpis, et pulvinar nulla feugiat vel. Phasellus tincidunt
-            erat metus, sed volutpat nisl ullamcorper mattis. Proin elementum
-            ullamcorper magna, ac euismod lorem fermentum in. Sed ac mauris ex.
-            Suspendisse pulvinar augue sodales urna interdum, ac hendrerit erat
-            rhoncus.
+            justo turpis, et pulvinar nulla feugiat vel.
           </p>
           <p>
             In dapibus purus libero, sed ultrices velit lobortis sit amet.
