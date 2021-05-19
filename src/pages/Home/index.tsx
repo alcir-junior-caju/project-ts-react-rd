@@ -12,6 +12,28 @@ import tabletImage from '@assets/tablet.png';
 
 import { Container } from './styles';
 
+const MODAL = {
+  title: 'Title Modal Component',
+  body: `
+  <p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+  cursus ultrices mauris, vitae rutrum libero ultrices nec. Nam
+  condimentum rutrum lacus, et egestas metus gravida ac. Vivamus
+  ornare quam elit, sed lobortis ante auctor at. Aenean augue dui,
+  dignissim vitae pharetra nec, auctor tristique metus. Aliquam auctor
+  justo turpis, et pulvinar nulla feugiat vel.
+</p>
+<p>
+  In dapibus purus libero, sed ultrices velit lobortis sit amet.
+  Praesent euismod enim vulputate enim pharetra, non feugiat tellus
+  efficitur. Nulla ac congue mauris. Maecenas iaculis sollicitudin
+  pharetra. Sed posuere orci id mollis eleifend. Nunc vitae sodales
+  turpis. Duis vehicula magna sed consectetur imperdiet. Duis non nisl
+  ligula.
+</p>
+  `
+};
+
 const Home: React.FC = () => {
   const { isScrollDown, setIsScrollDown } = useScrollDown();
   const { isModal, setIsModal } = useModal();
@@ -91,7 +113,7 @@ const Home: React.FC = () => {
       </Container>
 
       {isScrollDown && <ScrollDown />}
-      {isModal && <Modal />}
+      {isModal && <Modal title={MODAL.title} body={MODAL.body} />}
 
       <Footer />
     </>
