@@ -12,6 +12,31 @@ import tabletImage from '@assets/tablet.png';
 
 import { Container } from './styles';
 
+const SCROLL_DOWN = `
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+volutpat ex sit amet nibh cursus luctus. In facilisis risus eu pharetra
+luctus. Aenean id metus libero. Duis consectetur malesuada fringilla.
+Integer tincidunt leo et aliquam porttitor. Cras eu dolor sagittis,
+interdum nisl eget, fermentum sapien. Suspendisse nec tincidunt orci.
+</p>
+<p>
+Integer eu augue enim. Phasellus eleifend faucibus lectus at
+ullamcorper. Cras consectetur ex eu neque tempor, a convallis erat
+interdum. Etiam ante risus, dictum vitae rhoncus eget, congue lobortis
+leo. Etiam id ex a dolor maximus congue. Nam bibendum eros at lacus
+pellentesque, eu mollis erat aliquam.
+</p>
+<p>
+In sollicitudin faucibus pellentesque. Suspendisse egestas mollis
+sodales. Mauris at commodo tortor. Aenean elementum, ipsum id euismod
+posuere, mauris augue tempor sem, a viverra massa magna in dolor. Cras
+malesuada lobortis ex sed tincidunt. Quisque elit sem, scelerisque eget
+mi sit amet, mollis facilisis lectus. Suspendisse dictum eros et justo
+sodales scelerisque.
+</p>
+`;
+
 const MODAL = {
   title: 'Title Modal Component',
   body: `
@@ -112,7 +137,7 @@ const Home: React.FC = () => {
         )}
       </Container>
 
-      {isScrollDown && <ScrollDown />}
+      {isScrollDown && <ScrollDown body={SCROLL_DOWN} />}
       {isModal && <Modal title={MODAL.title} body={MODAL.body} />}
 
       <Footer />
